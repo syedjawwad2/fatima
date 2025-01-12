@@ -1,0 +1,129 @@
+.opening_title{
+    text-align: center;
+}
+.title{
+    font-size:xx-large;
+    font-family: Geneva, Verdana, sans-serif;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    animation: slidein ease-out;
+    animation-duration: 1.5s;  
+}
+.theletter{
+    padding-left: 10px;
+    padding-right: 5px;
+}
+.picture_header{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    
+}
+.main_header_picture{
+    display: inline-block;
+    height: 500px;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 20px;
+
+}
+.love_holder{
+    background-color: #3B1C32;
+    height: 1100px;
+    border-radius: 30px;
+    animation: parallex linear;
+    animation-timeline: scroll();
+}
+.headings{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content_tabs{
+    padding-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 233px 233px 233px;
+    gap: 10px;
+    /*background-color: #6A1E55;*/
+}
+.button1{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 5;
+}
+.button2{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.button3{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start:-1;
+    grid-column-end: -3;
+}
+.button4{
+    grid-row-start: -1;
+    grid-row-end: -2;
+    grid-column-start: -2;
+    grid-column-end: -5;
+}
+.button_container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.button_container button{
+    width: 528px;
+    height: 230px;
+    background-color: #6A1E55;
+    cursor: pointer;
+    border-radius: 30px;
+    border: none;
+    color: aliceblue;
+    padding: 0px;
+    box-shadow: 0px 0px 10px #A64D79;
+}
+.button_container button:hover{
+    width: 628px;
+    height: 230px;
+    background-color: #A64D79;
+    transition-duration: 0.5s;
+    box-shadow: 0px 0px 14px  #6A1E55;
+}
+.button_container button:active{
+    background-color:  #6A1E55;
+    transition-duration: 0ms;
+    box-shadow: 0px 0px 30px #A64D79;
+}
+.picture_header > div {
+    animation: fadein linear;
+    animation-duration: 2.5s;
+
+}
+.main_header_picture:hover{
+    scale: 1.25;
+    cursor: pointer;
+    transition-duration: 1s;
+}
+
+
+/* animation */
+
+@keyframes fadein{
+    from{scale: 0.8; opacity: 0;}
+    to{scale: 1; opacity: 1;}
+}
+@keyframes slidein{
+    from{padding-top: 30px; padding-bottom: 30px; opacity: 0; scale: 0.7;}
+    to{padding-top: 45px; padding-bottom: 45px; opacity: 1; scale: 1;}
+}
+@keyframes parallex{
+    to{transform: translateY(200px);}
+}

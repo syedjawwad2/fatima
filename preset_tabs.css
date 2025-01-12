@@ -1,0 +1,28 @@
+.backbody{
+    position: relative;
+    display: flex;
+    
+}
+.photogallery{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    z-index: -1;
+    animation: fadein ease-in;
+    animation-duration: 3s;
+}
+.images_back{
+    display: inline-block;
+    height: 500px;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 20px;
+}
+@keyframes fadein{
+    from{scale: 0.8; opacity: 0;}
+    to{scale: 1; opacity: 1;}
+}
